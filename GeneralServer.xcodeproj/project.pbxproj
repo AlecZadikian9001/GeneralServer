@@ -16,6 +16,7 @@
 		E1235EF71A69B10000A8BCD8 /* libcrypto.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = E1235EF41A69B10000A8BCD8 /* libcrypto.dylib */; };
 		E1235EF81A69B10000A8BCD8 /* libcurl.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = E1235EF51A69B10000A8BCD8 /* libcurl.dylib */; };
 		E1235EFB1A69B10900A8BCD8 /* ctalk.c in Sources */ = {isa = PBXBuildFile; fileRef = E1235EF91A69B10900A8BCD8 /* ctalk.c */; };
+		E1648CF91A6C41AC006A6074 /* sqlite3.c in Sources */ = {isa = PBXBuildFile; fileRef = E1648CF61A6C41AC006A6074 /* sqlite3.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -46,6 +47,9 @@
 		E1235EF51A69B10000A8BCD8 /* libcurl.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libcurl.dylib; sourceTree = "<group>"; };
 		E1235EF91A69B10900A8BCD8 /* ctalk.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ctalk.c; sourceTree = "<group>"; };
 		E1235EFA1A69B10900A8BCD8 /* ctalk.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ctalk.h; sourceTree = "<group>"; };
+		E1648CF61A6C41AC006A6074 /* sqlite3.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = sqlite3.c; sourceTree = "<group>"; };
+		E1648CF71A6C41AC006A6074 /* sqlite3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sqlite3.h; sourceTree = "<group>"; };
+		E1648CF81A6C41AC006A6074 /* sqlite3ext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sqlite3ext.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +102,9 @@
 		E1235EF21A69B0F200A8BCD8 /* lib */ = {
 			isa = PBXGroup;
 			children = (
+				E1648CF61A6C41AC006A6074 /* sqlite3.c */,
+				E1648CF71A6C41AC006A6074 /* sqlite3.h */,
+				E1648CF81A6C41AC006A6074 /* sqlite3ext.h */,
 				E1235EF91A69B10900A8BCD8 /* ctalk.c */,
 				E1235EFA1A69B10900A8BCD8 /* ctalk.h */,
 				E1235EF31A69B10000A8BCD8 /* libssl.dylib */,
@@ -168,6 +175,7 @@
 				E1235EEE1A69B0E600A8BCD8 /* database.c in Sources */,
 				E1235EFB1A69B10900A8BCD8 /* ctalk.c in Sources */,
 				E1235EEF1A69B0E600A8BCD8 /* general.c in Sources */,
+				E1648CF91A6C41AC006A6074 /* sqlite3.c in Sources */,
 				E1235EE61A69B0A600A8BCD8 /* testClient.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -290,6 +298,7 @@
 				E1235EE31A69B08500A8BCD8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

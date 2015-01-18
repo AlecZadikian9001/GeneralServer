@@ -16,6 +16,7 @@
 #include <errno.h>
 #include <arpa/inet.h>
 #include "general.h"
+#include "server.h"
 #include "ctalk.h"
 
 #include "testClient.h"
@@ -43,8 +44,8 @@ int interactiveTest(){
             return RET_NETWORK_ERROR;
         }
         keyboard[strlen(keyboard)-1] = '\0';
-        cTalkSend(sockfd, keyboard, strlen(keyboard)+1);
-        cTalkRecv(sockfd, keyboard, sizeof(keyboard));
+        SERVER_SEND(sockfd, keyboard, strlen(keyboard)+1);
+        SERVER_RECV(sockfd, keyboard, sizeof(keyboard));
         printf("stdout >> %s\n", keyboard);
     }
 }
