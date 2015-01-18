@@ -7,7 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E1235EDE1A69B08500A8BCD8 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = E1235EDD1A69B08500A8BCD8 /* main.c */; };
+		E1235EE61A69B0A600A8BCD8 /* testClient.c in Sources */ = {isa = PBXBuildFile; fileRef = E1235EE51A69B0A600A8BCD8 /* testClient.c */; };
+		E1235EEE1A69B0E600A8BCD8 /* database.c in Sources */ = {isa = PBXBuildFile; fileRef = E1235EE81A69B0E600A8BCD8 /* database.c */; };
+		E1235EEF1A69B0E600A8BCD8 /* general.c in Sources */ = {isa = PBXBuildFile; fileRef = E1235EEA1A69B0E600A8BCD8 /* general.c */; };
+		E1235EF01A69B0E600A8BCD8 /* server.c in Sources */ = {isa = PBXBuildFile; fileRef = E1235EEC1A69B0E600A8BCD8 /* server.c */; };
+		E1235EF11A69B0E600A8BCD8 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = E1235EED1A69B0E600A8BCD8 /* main.c */; };
+		E1235EF61A69B10000A8BCD8 /* libssl.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = E1235EF31A69B10000A8BCD8 /* libssl.dylib */; };
+		E1235EF71A69B10000A8BCD8 /* libcrypto.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = E1235EF41A69B10000A8BCD8 /* libcrypto.dylib */; };
+		E1235EF81A69B10000A8BCD8 /* libcurl.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = E1235EF51A69B10000A8BCD8 /* libcurl.dylib */; };
+		E1235EFB1A69B10900A8BCD8 /* ctalk.c in Sources */ = {isa = PBXBuildFile; fileRef = E1235EF91A69B10900A8BCD8 /* ctalk.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -24,7 +32,20 @@
 
 /* Begin PBXFileReference section */
 		E1235EDA1A69B08500A8BCD8 /* GeneralServer */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = GeneralServer; sourceTree = BUILT_PRODUCTS_DIR; };
-		E1235EDD1A69B08500A8BCD8 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
+		E1235EE41A69B0A600A8BCD8 /* testClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = testClient.h; sourceTree = "<group>"; };
+		E1235EE51A69B0A600A8BCD8 /* testClient.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = testClient.c; sourceTree = "<group>"; };
+		E1235EE71A69B0E600A8BCD8 /* database.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = database.h; sourceTree = "<group>"; };
+		E1235EE81A69B0E600A8BCD8 /* database.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = database.c; sourceTree = "<group>"; };
+		E1235EE91A69B0E600A8BCD8 /* general.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = general.h; sourceTree = "<group>"; };
+		E1235EEA1A69B0E600A8BCD8 /* general.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = general.c; sourceTree = "<group>"; };
+		E1235EEB1A69B0E600A8BCD8 /* server.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = server.h; sourceTree = "<group>"; };
+		E1235EEC1A69B0E600A8BCD8 /* server.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = server.c; sourceTree = "<group>"; };
+		E1235EED1A69B0E600A8BCD8 /* main.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
+		E1235EF31A69B10000A8BCD8 /* libssl.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libssl.dylib; sourceTree = "<group>"; };
+		E1235EF41A69B10000A8BCD8 /* libcrypto.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libcrypto.dylib; sourceTree = "<group>"; };
+		E1235EF51A69B10000A8BCD8 /* libcurl.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libcurl.dylib; sourceTree = "<group>"; };
+		E1235EF91A69B10900A8BCD8 /* ctalk.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ctalk.c; sourceTree = "<group>"; };
+		E1235EFA1A69B10900A8BCD8 /* ctalk.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ctalk.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +53,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E1235EF61A69B10000A8BCD8 /* libssl.dylib in Frameworks */,
+				E1235EF71A69B10000A8BCD8 /* libcrypto.dylib in Frameworks */,
+				E1235EF81A69B10000A8BCD8 /* libcurl.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -41,6 +65,7 @@
 		E1235ED11A69B08500A8BCD8 = {
 			isa = PBXGroup;
 			children = (
+				E1235EF21A69B0F200A8BCD8 /* lib */,
 				E1235EDC1A69B08500A8BCD8 /* GeneralServer */,
 				E1235EDB1A69B08500A8BCD8 /* Products */,
 			);
@@ -57,9 +82,29 @@
 		E1235EDC1A69B08500A8BCD8 /* GeneralServer */ = {
 			isa = PBXGroup;
 			children = (
-				E1235EDD1A69B08500A8BCD8 /* main.c */,
+				E1235EE71A69B0E600A8BCD8 /* database.h */,
+				E1235EE81A69B0E600A8BCD8 /* database.c */,
+				E1235EE91A69B0E600A8BCD8 /* general.h */,
+				E1235EEA1A69B0E600A8BCD8 /* general.c */,
+				E1235EEB1A69B0E600A8BCD8 /* server.h */,
+				E1235EEC1A69B0E600A8BCD8 /* server.c */,
+				E1235EED1A69B0E600A8BCD8 /* main.c */,
+				E1235EE41A69B0A600A8BCD8 /* testClient.h */,
+				E1235EE51A69B0A600A8BCD8 /* testClient.c */,
 			);
 			path = GeneralServer;
+			sourceTree = "<group>";
+		};
+		E1235EF21A69B0F200A8BCD8 /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				E1235EF91A69B10900A8BCD8 /* ctalk.c */,
+				E1235EFA1A69B10900A8BCD8 /* ctalk.h */,
+				E1235EF31A69B10000A8BCD8 /* libssl.dylib */,
+				E1235EF41A69B10000A8BCD8 /* libcrypto.dylib */,
+				E1235EF51A69B10000A8BCD8 /* libcurl.dylib */,
+			);
+			name = lib;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -118,7 +163,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E1235EDE1A69B08500A8BCD8 /* main.c in Sources */,
+				E1235EF11A69B0E600A8BCD8 /* main.c in Sources */,
+				E1235EF01A69B0E600A8BCD8 /* server.c in Sources */,
+				E1235EEE1A69B0E600A8BCD8 /* database.c in Sources */,
+				E1235EFB1A69B10900A8BCD8 /* ctalk.c in Sources */,
+				E1235EEF1A69B0E600A8BCD8 /* general.c in Sources */,
+				E1235EE61A69B0A600A8BCD8 /* testClient.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -202,6 +252,10 @@
 		E1235EE21A69B08500A8BCD8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -209,6 +263,10 @@
 		E1235EE31A69B08500A8BCD8 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
