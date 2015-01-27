@@ -34,7 +34,7 @@
 
 int main(int argc, const char * argv[]){
     if (argc!=5){
-        printf("Invalid usage. Start with: GeneralServer [logLevel] [threadLimit] [timeout] [keepAlive]\n");
+        printf("Invalid usage. Start with: GeneralServer [logLevel] [threadLimit] [timeout] [keepAlive]\n"); // TODO edit message if you want
         return 0;
     }
     logLevel = (atoi(argv[1])>LOG_FULL)?LOG_FULL:atoi(argv[1]);
