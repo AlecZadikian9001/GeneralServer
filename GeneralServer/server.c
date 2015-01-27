@@ -39,13 +39,6 @@ struct ServerWorkerThread{
     char* dictionary; // master dictionary, a 2D array of chars (numWords x LONGEST_WORD)
 };
 
-// These are macros to the functions used to send/receive data.
-// Example provided: Sends and receives using cTalk, which uses prepended variable-length quanitity values to indicate message length in order to separate messages.
-/* vvv ** TODO YOUR CODE HERE ** vvv */
-#define SERVER_SEND(socket, buffer, len) cTalkSend(socket, buffer, len)
-#define SERVER_RECV(socket, buffer, len) cTalkRecv(socket, buffer, len)
-/* ^^^ ** TODO YOUR CODE HERE ** ^^^ */
-
 void* workerThreadFunction(void* argVoid){
     struct ServerWorkerThread* arg = (struct ServerWorkerThread*) argVoid;
     int clntSock = 0;
@@ -198,17 +191,19 @@ int startServer(struct Server* mainArg){
     return changeThreadLimit(mainArg->threadLimit, mainArg);
 }
 
-// Tells all client threads to shut down ASAP.
+// Tells all worker threads to shut down ASAP.
 // Sets the server isRunning flag to false, which can have whatever consequences you intend.
 int stopServer(struct Server* server){
     changeThreadLimit(0, server);
     server->isRunning = false;
     return RET_NO_ERROR;
 }
+// Makes server start listening for connections (if it was stopped).
 int startListening(struct Server* server){
     server->isListening = true;
     return RET_NO_ERROR;
 }
+// Makes server stop listening for additional connections. Worker threads will wait until startListening() is called to begin accepting connections again.
 int stopListening(struct Server* server){
     server->isListening = false;
     return RET_NO_ERROR;

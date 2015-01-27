@@ -70,7 +70,7 @@ int main(int argc, const char * argv[]){
     if (logLevel>=LOG_ABNORMAL) printf("logLevel: %d\nthreadLimit: %d\ntimeout: %f\nkeepAlive: %d\n",logLevel,server.threadLimit, server.timeout, server.keepAlive);
     
     startServer(&server);
-    interactiveTest();
+    interactiveTest(); // Runs the test defined in testClient.h; you may comment this line out.
     
     // Now wait as the worker threads run.
     // Stops once the thread count hits 0.
